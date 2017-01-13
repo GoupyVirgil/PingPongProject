@@ -43,13 +43,25 @@
     <!--<br><br>-->
     <!--{{>add_new_player}}-->
     <div class="inscr_container">
+        {{#if exist_error}}
+            <div class="popup_connexion">
+                <div class="logs">
+                    <div class="logs_content">
+                        <p>
+                            VEUILLEZ AJOUTER <br> AU MOINS 4 JOUEURS POUR VALIDER
+                        </p>
+                        <a href="" id="ok" class="btn_valider">j'ai compris</a>
+                    </div>
+                </div>
+            </div>
+        {{/if}}
         <section class="left">
             <div class="back">
                 <a class="back_arrow" href="/board">Retour à l'accueil</a>
             </div>
             <div class="left_container">
                 <div class="title">
-                    <h1>inscription</h1>
+                    <h2>inscription</h2>
                     <span class="h1_shadow">inscription</span>
                 </div>
                 <div class="table">
@@ -137,6 +149,7 @@
 
             <img class="bg_right" src="/img/redpong.svg" alt="">
         </section>
+
     </div>
 </template>
 

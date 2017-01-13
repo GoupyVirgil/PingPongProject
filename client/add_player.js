@@ -1,4 +1,5 @@
 import { Template } from 'meteor/templating';
+Session.set('errorMessage', false );
 
 Template.add_player_template.events
 ( {
@@ -79,16 +80,31 @@ Template.add_player_template.events
 
                 //SEND MAIL HERE
                 // '/accept/'+docsInserted+'/'+'firstname_j1+'/'+lastname_j1
-                console.log(docsInserted);
+
             });
+
+
+                var help = user_added.find().fetch();
+
+                for(var i =0; i<help.length; i++){
+                    var url = 'accept/'+help[i]._id+'/'+help[i].firstname+'/'+help[i].lastname;
+                    memo.insert({url:url});
+                }
+
+
+
 
             Router.go('/board');
         }
 
         else{
             var err = { message : 'champ incorrect'};
-            Session.set('errorMessage', err.message );
+            Session.set('errorMessage', true );
         }
+    },
+
+    'click #ok': function(){
+        Session.set('errorMessage', false );
     }
 } );
 
@@ -124,8 +140,18 @@ Template.add_new_player.events( {
 
         else{
             var err = { message : 'champ incorrect'};
-            Session.set('errorMessage', err.message );
+            Session.set('errorMessage', true );
         }
     }
 } );
+
+Template.add_player_template.helpers
+(
+    {
+        exist_error: function(){
+            return Session.get('errorMessage');
+        },
+    }
+);
+
 
