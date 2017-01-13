@@ -1,0 +1,176 @@
+<template name="guest_board_template">
+
+        <!--{{#if get_tournament}}-->
+
+    <!--<h1>toto</h1>-->
+        <!--{{#each get_tournament.tournament}}-->
+        <!--<div style="border:1px solid black;">-->
+        <!--<div>phase : {{stage}}</div>-->
+
+            <!--{{#each versus}}-->
+            <!--&lt;!&ndash;versus&ndash;&gt;-->
+            <!--<div>-->
+                <!--{{#each this}}-->
+                <!--<h1>joueur</h1>-->
+                <!--<div class="player" data-id="{{_id}}" data-phase="{{../../stage}}" data-tournament="{{get_tournament.id}}">-->
+                <!--{{firstname}}-->
+                <!--</div>-->
+                    <!--{{/each}}-->
+            <!--</div>-->
+            <!--<br><br>-->
+            <!--&lt;!&ndash;versus&ndash;&gt;-->
+                <!--{{/each}}-->
+        <!--</div>-->
+            <!--{{/each}}-->
+
+        <!--{{/if}}-->
+
+
+
+
+    <section id="tournament" class="tournament">
+        <div class="tournament_head">
+            <span class="tournament_head_btn back">Retour à l'accueil</span>
+            <span class="tournament_head_btn name btn" id="profile">John Doe</span>
+            <ul class="tournament_head_list" id="tournamentList">
+                <li>Résultats des matchs</li>
+                <li>Ajouter des joueurs</li>
+            </ul>
+        </div>
+        <div class="tournament_content">
+            <div class="tournament_subHead">
+                <h2><strong>Résultats des matchs -</strong> Phase 1 </h2>
+                <p class="first"><strong>Vous avez jusqu'au <span style="font-weight: bold">XX</span></strong> pour trouver vos champions !</p>
+                <p class="scd">Vous pouvez modifier ou qualifier les joueurs en cliquant sur leurs noms</p>
+            </div>
+
+
+
+
+
+            <div class="tournament_layout">
+
+
+                {{#each get_tournament.tournament}}
+                    <div class="tournament_phase phase2">
+                        {{#each versus}}
+                            <div class="tournament_phase_match">
+                                {{#each this}}
+                                    <div class="tournament_phase_match_player player">
+                                        <span class="rounded" data-id="{{_id}}" data-phase="{{../../stage}}" data-tournament="{{get_tournament.id}}"></span>
+                                        <span class="tournament_phase_match_player_name">{{firstname}} {{lastname}}</span>
+                                        <span class="tournament_phase_match_player_structure">Structure</span>
+                                    </div>
+                                {{/each}}
+                                <!--<div class="tournament_phase_match_player">-->
+                                <!--<span class="rounded"></span>-->
+                                <!--<span class="tournament_phase_match_player_name">John Doe</span>-->
+                                <!--<span class="tournament_phase_match_player_structure">Structure</span>-->
+                                <!--</div>-->
+                            </div>
+                        {{/each}}
+
+                        <!--<div class="tournament_phase_match">-->
+                        <!--<div class="tournament_phase_match_player">-->
+                        <!--<span class="rounded"></span>-->
+                        <!--<span class="tournament_phase_match_player_name">John Doe</span>-->
+                        <!--<span class="tournament_phase_match_player_structure">Structure</span>-->
+                        <!--</div>-->
+                        <!--<div class="tournament_phase_match_player">-->
+                        <!--<span class="rounded"></span>-->
+                        <!--<span class="tournament_phase_match_player_name">John Doe</span>-->
+                        <!--<span class="tournament_phase_match_player_structure">Structure</span>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="tournament_phase_match">-->
+                        <!--<div class="tournament_phase_match_player">-->
+                        <!--<span class="rounded"></span>-->
+                        <!--<span class="tournament_phase_match_player_name">John Doe</span>-->
+                        <!--<span class="tournament_phase_match_player_structure">Structure</span>-->
+                        <!--</div>-->
+                        <!--<div class="tournament_phase_match_player">-->
+                        <!--<span class="rounded"></span>-->
+                        <!--<span class="tournament_phase_match_player_name">John Doe</span>-->
+                        <!--<span class="tournament_phase_match_player_structure">Structure</span>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="tournament_phase_match">-->
+                        <!--<div class="tournament_phase_match_player">-->
+                        <!--<span class="rounded"></span>-->
+                        <!--<span class="tournament_phase_match_player_name">John Doe</span>-->
+                        <!--<span class="tournament_phase_match_player_structure">Structure</span>-->
+                        <!--</div>-->
+                        <!--<div class="tournament_phase_match_player">-->
+                        <!--<span class="rounded"></span>-->
+                        <!--<span class="tournament_phase_match_player_name">John Doe</span>-->
+                        <!--<span class="tournament_phase_match_player_structure">Structure</span>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                {{/each}}
+                <!-- PHASE 2 -->
+                <!--<div class="tournament_phase phase2">-->
+                <!--<div class="tournament_phase_match">-->
+                <!--<div class="tournament_phase_match_player">-->
+                <!--<span class="rounded"></span>-->
+                <!--<span class="tournament_phase_match_player_name">John Doe</span>-->
+                <!--<span class="tournament_phase_match_player_structure">Structure</span>-->
+                <!--</div>-->
+                <!--<div class="tournament_phase_match_player">-->
+                <!--<span class="rounded"></span>-->
+                <!--<span class="tournament_phase_match_player_name">John Doe</span>-->
+                <!--<span class="tournament_phase_match_player_structure">Structure</span>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="tournament_phase_match">-->
+                <!--<div class="tournament_phase_match_player">-->
+                <!--<span class="rounded"></span>-->
+                <!--<span class="tournament_phase_match_player_name">John Doe</span>-->
+                <!--<span class="tournament_phase_match_player_structure">Structure</span>-->
+                <!--</div>-->
+                <!--<div class="tournament_phase_match_player">-->
+                <!--<span class="rounded"></span>-->
+                <!--<span class="tournament_phase_match_player_name">John Doe</span>-->
+                <!--<span class="tournament_phase_match_player_structure">Structure</span>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; FINALE &ndash;&gt;-->
+                <!--<div class="tournament_phase finale">-->
+                <!--<div class="tournament_phase_match">-->
+                <!--<div class="tournament_phase_match_player">-->
+                <!--<span class="rounded"></span>-->
+                <!--<span class="tournament_phase_match_player_name">John Doe</span>-->
+                <!--<span class="tournament_phase_match_player_structure">Structure</span>-->
+                <!--</div>-->
+                <!--<div class="tournament_phase_match_player">-->
+                <!--<span class="rounded"></span>-->
+                <!--<span class="tournament_phase_match_player_name">John Doe</span>-->
+                <!--<span class="tournament_phase_match_player_structure">Structure</span>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; WINNER &ndash;&gt;-->
+                <!--<div class="tournament_phase winner">-->
+                <!--<div class="tournament_phase_match">-->
+                <!--<div class="tournament_phase_match_player">-->
+                <!--<span class="rounded"></span>-->
+                <!--<span class="tournament_phase_match_player_name">John Doe</span>-->
+                <!--<span class="tournament_phase_match_player_structure">Structure</span>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+
+
+
+
+
+
+
+
+
+            <button class="btn tournament_btn">valider les champions</button>
+        </div>
+    </section>
+</template>

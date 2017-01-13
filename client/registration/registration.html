@@ -1,0 +1,59 @@
+<template name="registration_template">
+
+    <div class="inscr_container">
+        <section class="left">
+            <div class="back">
+                <a class="back_arrow" href="/">Retour à l'accueil</a>
+            </div>
+            <div class="left_container">
+                <div class="title">
+                    <h1>inscription</h1>
+                    <span class="h1_shadow">inscription</span>
+                </div>
+                <div class="table">
+                    <img src="img/table.svg" alt="">
+                </div>
+                <p class="about">
+                    Les inscriptions à la Ping Pong Startup Cup sont ouvertes aux <br>startups, espaces d’innovations, incubateurs, agences digitales <br>
+                    et espaces de coworking.
+                    <br>
+                    <br>
+                    Une fois la structure enregistrée, vous pourrez inscrire tous les joueurs <br> et organiser la phase de sélections des champions.
+                    <br>
+                    <br>
+                    Il n’y a pas de limite de d’inscriptions juste une date limite <br>
+                    de participation.
+                </p>
+            </div>
+        </section>
+        <section class="right">
+            <img class="bg_right" src="img/bluepong.svg" alt="">
+            <div class="form">
+                <span class="add_logo">Ajoutez le logo de votre structure</span>
+                <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                <label for="file">
+                    <img src="img/+.png" alt="">
+                    <span>Parcourir...</span>
+                </label>
+                <input type="text" id="structureName" placeholder="Nom de votre structure...">
+                <select name="typeof" id="structureType">
+                    <option disabled selected hidden >Type de structure</option>
+                    <option value="Incubateur">Incubateur</option>
+                    <option value="StartUp">StartUp</option>
+                    <option value="Espace d'innovation">Espace d'innovation</option>
+                    <option value="Espace de coworking">Espace de coworking</option>
+                    <option value="Agence digitale">Agence digitale</option>
+                </select>
+                <input type="text"  placeholder="Votre prénom" id="firstname">
+                <!--<input type="text" placeholder="Votre nom">-->
+                <input type="email"  placeholder="Email" id="email">
+                <input type="password" placeholder="Mot de passe" id="password" >
+                <input type="text" placeholder="Téléphone" id="phone">
+                <button id="registration" class="btn_valider">Valider</button>
+            </div>
+            <img class="bg_right" src="img/redpong.svg" alt="">
+        </section>
+    </div>
+</template>
+
+

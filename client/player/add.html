@@ -1,0 +1,143 @@
+<template name="add_player_template">
+    <!--<h1>add player</h1>-->
+    <!--<div>-->
+        <!--<h1>Joueur1</h1>-->
+        <!--<div>-->
+            <!--<input type="text" placeholder="Prénom" id="firstname_j1">-->
+            <!--<input type="text" placeholder="Nom" id="lastname_j1">-->
+            <!--<input type="email" placeholder="Email" id="email_j1">-->
+            <!--<input type="text" placeholder="Nom de la structure" id="structurename_j1">-->
+        <!--</div>-->
+        <!--<br><br>-->
+
+        <!--<h1>Joueur2</h1>-->
+        <!--<div>-->
+            <!--<input type="text" placeholder="Prénom" id="firstname_j2">-->
+            <!--<input type="text" placeholder="Nom" id="lastname_j2">-->
+            <!--<input type="email" placeholder="Email" id="email_j2">-->
+            <!--<input type="text" placeholder="Nom de la structure" id="structurename_j2">-->
+        <!--</div>-->
+
+        <!--<br><br>-->
+
+        <!--<h1>Joueur3</h1>-->
+        <!--<div>-->
+            <!--<input type="text" placeholder="Prénom" id="firstname_j3">-->
+            <!--<input type="text" placeholder="Nom" id="lastname_j3">-->
+            <!--<input type="email" placeholder="Email" id="email_j3">-->
+            <!--<input type="text" placeholder="Nom de la structure" id="structurename_j3">-->
+        <!--</div>-->
+
+        <!--<br><br>-->
+        <!--<h1>Joueur4</h1>-->
+        <!--<div>-->
+            <!--<input type="text" placeholder="Prénom" id="firstname_j4">-->
+            <!--<input type="text" placeholder="Nom" id="lastname_j4">-->
+            <!--<input type="email" placeholder="Email" id="email_j4">-->
+            <!--<input type="text" placeholder="Nom de la structure" id="structurename_j4">-->
+        <!--</div>-->
+
+    <!--</div>-->
+    <!--<a href="" id="addPlayer">Valider les participants</a>-->
+    <!--{{>error_template}}-->
+    <!--<br><br>-->
+    <!--{{>add_new_player}}-->
+    <div class="inscr_container">
+        <section class="left">
+            <div class="back">
+                <a class="back_arrow" href="/board">Retour à l'accueil</a>
+            </div>
+            <div class="left_container">
+                <div class="title">
+                    <h1>inscription</h1>
+                    <span class="h1_shadow">inscription</span>
+                </div>
+                <div class="table">
+                    <img src="img/table.svg" alt="">
+                </div>
+                <p class="about">
+                    Les inscriptions à la Ping Pong Startup Cup sont ouvertes aux <br>startups, espaces d’innovations, incubateurs, agences digitales <br>
+                    et espaces de coworking.
+                    <br>
+                    <br>
+                    Une fois la structure enregistrée, vous pourrez inscrire tous les joueurs <br> et organiser la phase de sélections des champions.
+                    <br>
+                    <br>
+                    Il n’y a pas de limite de d’inscriptions juste une date limite <br>
+                    de participation.
+                </p>
+            </div>
+        </section>
+        <section class="right">
+            <img class="bg_right" src="img/bluepong.svg" alt="">
+
+
+            <div class="team_list">
+                <div class="team_player">
+                    <div class="player_name">
+                        <p>
+                            Joueur 1
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="player_infos">
+                        <input type="text" placeholder="Nom" id="lastname_j1">
+                        <input type="text" placeholder="Prénom" id="firstname_j1">
+                        <input type="email" placeholder="Email" id="email_j1">
+                    </div>
+                </div>
+                <div class="team_player">
+                    <div class="player_name">
+                        <p>
+                            Joueur 2
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="player_infos">
+                        <input type="text" placeholder="Nom" id="lastname_j2">
+                        <input type="text" placeholder="Prénom" id="firstname_j2">
+                        <input type="email" placeholder="Email" id="email_j2">
+                    </div>
+                </div>
+                <div class="team_player">
+                    <div class="player_name">
+                        <p>
+                            Joueur 3
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="player_infos">
+                        <input type="text" placeholder="Nom"  id="lastname_j3">
+                        <input type="text" placeholder="Prénom" id="firstname_j3">
+                        <input type="email" placeholder="Email" id="email_j3">
+                    </div>
+                </div>
+                <div class="team_player">
+                    <div class="player_name">
+                        <p>
+                            Joueur 4
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="player_infos">
+                        <input type="text" placeholder="Nom" id="lastname_j4">
+                        <input type="text" placeholder="Prénom" id="firstname_j4">
+                        <input type="email" placeholder="Email" id="email_j4">
+                    </div>
+                </div>
+
+                <div class="btn_team">
+                    <a href="#" id="addPlayer" class="btn_valider">Valider</a>
+                    <a href="#" class="btn_valider">Ajouter</a>
+                </div>
+                <br><br>
+                {{>add_new_player}}
+
+            </div>
+
+            <img class="bg_right" src="/img/redpong.svg" alt="">
+        </section>
+    </div>
+</template>
+
+

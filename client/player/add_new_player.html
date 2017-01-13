@@ -1,0 +1,27 @@
+<template name="add_new_player">
+    <!--<div>-->
+        <!--<input type="text" placeholder="Prénom" id="new_firstname">-->
+        <!--<input type="text" placeholder="Nom" id="new_lastname">-->
+        <!--<input type="email" placeholder="Email" id="new_email">-->
+    <!--</div>-->
+    <!--<a href="" id="addNewPlayer">Valider le nouveau participant</a>-->
+
+
+    <div class="team_player">
+        <div class="player_name">
+            <p>
+                Nouveau Joueur
+            </p>
+            <hr>
+        </div>
+        <div class="player_infos">
+            <input type="text" placeholder="Nom" id="new_lastname">
+            <input type="text" placeholder="Prénom" id="new_firstname">
+            <input type="email" placeholder="Email" id="new_email">
+        </div>
+    </div>
+    <div class="btn_team">
+        <a href="#" style="background-color: #85db91;" class="btn_valider" id="addNewPlayer">Ajouter New Player</a>
+    </div>
+    {{>error_template}}
+</template>
