@@ -32,7 +32,7 @@
 
     <section id="tournament" class="tournament">
         <div class="tournament_head">
-            <span class="tournament_head_btn back">Retour à l'accueil</span>
+            <a class="tournament_head_btn back" href="/">Retour à l'accueil</a>
             <a class="tournament_head_btn name btn" id="profile" href="/addPlayer">Ajouter un joueur</a>
             <ul class="tournament_head_list" id="tournamentList">
                 <li>Résultats des matchs</li>
@@ -41,7 +41,7 @@
         </div>
         <div class="tournament_content">
             <div class="tournament_subHead">
-                <h2><strong>Résultats des matchs -</strong> Phase 1 </h2>
+                <h2><strong>Résultats des matchs</strong></h2>
                 <p class="first"><strong>Vous avez jusqu'au <span style="font-weight: bold">XX</span></strong> pour trouver vos champions !</p>
                 <p class="scd">Vous pouvez modifier ou qualifier les joueurs en cliquant sur leurs noms</p>
             </div>
@@ -63,7 +63,7 @@
                 </div>
                 {{/each}}
             </div>
-            <button class="btn tournament_btn mainBtn">valider les champions</button>
+            <!--<button class="btn tournament_btn mainBtn">valider les champions</button>-->
         </div>
     </section>
 </template>

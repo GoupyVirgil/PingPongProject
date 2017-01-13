@@ -1,8 +1,8 @@
-user_added.remove({});
-user_accepted.remove({});
-user_tournament.remove({});
-memo.remove({});
-Meteor.users.remove({});
+// user_added.remove({});
+// user_accepted.remove({});
+// user_tournament.remove({});
+// memo.remove({});
+// Meteor.users.remove({});
 
 
 // Meteor.users.update({_id:'iHXZWc2a3vaC4wdQ6'}, {$set: {profile : {
